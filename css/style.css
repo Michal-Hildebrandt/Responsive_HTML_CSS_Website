@@ -7,17 +7,43 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.hero-bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+}
+
+.hero-text h1 {
+	margin-bottom: 5px;
+	text-shadow: 3px 3px 5px #000;
+	color: lightgray;
+}
+
+.hero-text span {
+	text-transform: uppercase;
+	color: rgb(212, 83, 32);
+}
+
 nav {
 	height: 50px;
 	line-height: 50px;
 	background-color: lightgray;
 	text-align: center;
-}
-
-.wrapper {
-	margin: 0 auto;
-	width: 100%;
-	max-width: 1200px;
 }
 
 .burger-icon {
@@ -39,6 +65,14 @@ nav {
 	display: none;
 }
 
+.header {
+	position: relative;
+	height: 330px;
+	background-image: url('../img/mountains-small.png');
+	background-size: cover;
+	background-position: center;
+}
+
 @media (min-width: 768px) {
 	.burger-icon {
 		display: none;
@@ -47,7 +81,7 @@ nav {
 	.nav-items {
 		display: block;
 	}
-	 
+
 	.nav-items a {
 		padding: 0 30px;
 		text-decoration: none;
@@ -59,5 +93,28 @@ nav {
 
 	.nav-items a:hover {
 		color: rgb(94, 68, 30);
+	}
+
+	.header {
+		height: 500px;
+		background-image: url('../img/mountains-large.png');
+	}
+
+	.hero-text h1 {
+		font-size: 36px;
+	}
+
+	.hero-text p {
+		font-size: 18px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.hero-text h1 {
+		font-size: 50px;
+	}
+
+	.hero-text p {
+		font: size 25px;
 	}
 }
